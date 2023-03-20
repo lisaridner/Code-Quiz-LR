@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript Quiz</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h2 id="game-timer">Game Timer</h2>
-    <button id="start-button">Start quiz</button>
+<body>    
     <!-- create container to hold questions and option buttons -->
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="questions">Javascript Text</h2>
+            <ul>
+                <li>
+                    <input class="answer" type="checkbox"
+                    name="answer" id="a">
+                    <label for ="a" id="choiceA">Choice A</label>
+                </li>
+                <li>
+                    <input class="answer" type="checkbox"
+                    name="answer" id="b">
+                    <label for ="b" id="choiceB">Choice B</label>
+                </li>
+                <li>
+                    <input class="answer" type="checkbox"
+                    name="answer" id="c">
+                    <label for ="c" id="choiceC">Choice C</label>
+                </li>
+                <li>
+                    <input class="answer" type="checkbox"
+                    name="answer" id="d">
+                    <label for ="d" id="choiceD">Choice D</label>
+                </li>
+            </ul>
+        </div>
+            <h2 id="game-timer">Game Timer</h2>
+                 <button id="start-button">Start quiz</button>
+    </div>
  <script src="./script.js"></script>   
 </body>
 </html>

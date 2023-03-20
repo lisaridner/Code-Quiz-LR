@@ -15,7 +15,7 @@ startBtn.addEventListener("click", function () {
     countdown()
 })
 
-// create questions with options and a correct answers Look that up
+// create questions with options and a correct answers - Look that up
 // look up array of objects
 // create a function that populates a set of questions and options
 // function that checks the answer 

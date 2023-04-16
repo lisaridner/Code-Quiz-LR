@@ -8,12 +8,31 @@ function countdown() {
         if (seconds <=0) {
         clearInterval(clock)    
         }
-    }, 1000)
+    }, 1000);
+
+    currentQuestionIndex = 0;
+    showQuestion()
 }
 startBtn.addEventListener("click", function () {
     console.log("my button was clicked")
     countdown()
 })
+
+function showQuestion(){
+    const question = questions[currentQuestionIndex];
+   questionElement.innerText = question.question;
+   answerButtonsElement.innerHTML = '';
+   question.answers.forEach(answer => {
+       const button = document.createElement('button');
+       button.innerText = answer.text;
+       button.classList.add('btn');
+       if (answer.correct){
+           button.dataset.correct = answer.correct;
+       }
+       button.addEventListener('click',selectAnswer);
+       answerButtonsElement.appendChild(button);
+   })
+   }
 
 // create questions with options and a correct answers - Look that up
 // look up array of objects
